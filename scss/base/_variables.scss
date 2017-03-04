@@ -1,0 +1,46 @@
+
+/* --- DESCRIPTIVE COLOUR VARIABLES --- */
+
+$dark-grey: #262626;
+$white: #fff;
+$grey-blue: #7E8AA2;
+$blue: #263248;
+$orange: #FF7B47;
+$green: #7ad38b;
+
+/* --- FUNCTIONAL COLOUR VARIABLES --- */
+
+$color-primary: $blue;
+$color-secondary: $grey-blue;
+
+// Text
+
+$text-dark: $dark-grey;
+$text-light: $white;
+
+//borders
+
+$border-dark: $dark-grey;
+$border-light: $grey-blue;
+
+//links
+
+$link: $orange;
+$link-hover: darken($orange, 20%);
+
+//Notifications/alerts
+
+$alert: $green;
+
+
+/* --- FONTs --- */
+
+//STACKS
+
+$varela-round: 'Varela Round', sans-serif;
+
+//Sizes
+
+$text-lg: 2rem;
+$text-md: 1.5rem;
+$text-sml: 1rem;

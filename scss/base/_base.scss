@@ -1,0 +1,143 @@
+/* --- GENERAL --- */
+
+body {
+  background-color: $white;
+  font-size: $text-md;
+  font-family: $varela-round;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+svg {
+  width: 100%;
+}
+
+/* --- HEADER --- */
+
+.main-header {
+  background-color: $blue;
+  padding-top:15px;
+  position: relative;
+  padding: 15px 0;
+}
+
+.logo {
+  text-align: center;
+  text-decoration: none;
+  display: block;
+
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
+
+}
+
+.logo h1 {
+  margin: 0;
+  color: $white;
+  font-size: $text-lg;
+}
+
+a.nav-btn {
+  height: 40px;
+  width: 40px;
+  background: url('../img/nav-btn.png') no-repeat center center;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+}
+
+/* --- HEADER NAV --- */
+
+.header-nav {
+  background-color: $blue;
+  text-align: center;
+  overflow: hidden;
+  height: 0;
+
+  @media (min-width: 768px) {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.open {
+  height: auto;
+  padding: 15px 0;
+}
+
+.header-nav li {
+  color: $white;
+  font-size: $text-sml;
+  padding: 5px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    padding-left: 15px;
+  }
+
+}
+
+.header-nav li a {
+  display: block;
+}
+
+.header-nav img {
+  width: 30px;
+  height: auto;
+}
+
+.user-img {
+  border-radius: 50%;
+  border: 1.5px solid $white;
+}
+
+.notification::after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: $green;
+  border-radius: 50%;
+  top: 0;
+  right: 46%;
+  z-index: 100;
+  content: "";
+
+  @media (min-width: 768px) {
+    top: 0;
+    right: 0;
+  }
+
+}
+
+/* --- MAIN NAV --- */
+
+.main-nav {
+  background-color: $grey-blue;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.main-nav li {
+  width: 10%;
+  padding: 10px;
+  max-width: 40px
+}
+
+.main-nav a {
+  display: block;
+}
