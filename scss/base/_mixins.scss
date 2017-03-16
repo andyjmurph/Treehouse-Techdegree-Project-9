@@ -1,0 +1,29 @@
+/* --- MEDIA QUERIES --- */
+
+@mixin tablet {
+  @media #{$brk-tablet} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$brk-desktop} {
+    @content;
+  }
+}
+
+/* --- FONTS --- */
+
+@mixin text ($f-family, $f-size: null, $f-weight: null, $l-height: null, $f-color: $text-dark ) {
+  font-family: $f-family;
+  font-size: $f-size;
+  font-weight: $f-weight;
+  line-height: $l-height;
+  color: $f-color;
+}
+
+/* --- PADDING & MARGIN --- */
+
+@mixin padding ($p-top: 0, $p-right: 0, $p-bottom: 0, $p-left: 0) {
+  padding: $p-top $p-right $p-bottom $p-left;
+}

@@ -1,0 +1,15 @@
+.active {
+  background: $alert;
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: $text-light;
+}
+
+.alert {
+  background: $alert;
+  border-radius: 2.5px;
+  padding: 10px;
+  color: $text-light;
+  text-align: left;
+  box-shadow: 0 2px 0 darken($alert, 20%);
+}

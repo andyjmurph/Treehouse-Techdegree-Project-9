@@ -1,0 +1,239 @@
+/* --- Header styles --- */
+
+.main-header {
+  background: $blue;
+  padding: 1rem 0;
+
+  & .container {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+/* --- Profile info styles --- */
+
+.profile-info {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.profile-info li {
+  margin-top: 0.9375rem;
+  color: $text-light;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tablet {
+    margin-right: 1rem;
+    margin-top: 0;
+  }
+
+}
+
+.profile-info svg,
+.user-img {
+  max-width: 1.5625rem;
+}
+
+.user-img {
+  border-radius: 50%;
+  border: 1px solid $text-light;
+}
+
+/* --- Notification icon --- */
+
+.notification {
+  position: relative;
+}
+
+.notification::before {
+  position: absolute;
+  top: 0;
+  right: calc(50% - 1.5626rem);
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  background: $alert;
+  border-radius: 50%;
+
+  @include tablet {
+    top: -4px;
+    right: -4px;
+  }
+
+}
+
+/* --- Burger nav icon --- */
+
+.btn-nav {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: url('../img/nav-btn.png') no-repeat center center;
+  position: absolute;
+  top: 1rem;
+  right: 2.5%;
+
+  @include tablet {
+    display: none;
+  }
+
+}
+
+/* --- Main nav --- */
+
+nav {
+  @include tablet {
+    flex: 0 0 7%;
+  }
+}
+
+.main-nav {
+  background: $grey-blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $p-10 2.5%;
+
+  @include tablet {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 0 0 0;
+  }
+}
+
+.main-nav li {
+  width: 100%;
+
+  @include tablet {
+    margin-bottom: 2rem;
+    position: relative;
+  }
+}
+
+.main-nav li a::before {
+  position: absolute;
+  top: .5rem;
+  right: -5px;
+  z-index: 100;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent $blue transparent transparent;
+  opacity: 0;
+  transform: translateX(-30%) scale(.1);
+  transition: .3s ease-out;
+}
+
+.main-nav li a::after {
+  position: absolute;
+  top: 0;
+  right: -125%;
+  min-width: 100px;
+  content: attr(data-tip);
+  background: $blue;
+  color: $text-light;
+  padding: .5rem;
+  border-radius: 2.5px;
+  text-align: center;
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(-30%) scale(.6);
+  transition: .2s ease-out;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+.main-nav li:hover a::after{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.main-nav li:hover a::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.main-nav svg {
+  max-width: 1.875rem;
+}
+
+/* --- Main content --- */
+
+main {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    flex: 0 0 93%;
+  }
+}
+
+.dashboard {
+  @extend %center;
+  width: 90%;
+
+  @include tablet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 0 0 100%;
+  height: 60px;
+  }
+}
+
+.dashboard h2 {
+
+  @include tablet {
+  flex: 0 0 10%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  margin-right: auto;
+  }
+}
+
+.search-bar {
+  @include tablet {
+  display: flex;
+  align-items: center;
+  flex: 0 0 80%;
+  justify-content: flex-end;
+  align-self: stretch;
+  padding-right: 2.5%;
+  background: $light-grey;
+  border-left: solid 1px darken($light-grey, 20%);
+  border-bottom: solid 1px darken($light-grey, 20%);
+  }
+}
+
+.search-box {
+  appearance: none;
+  outline: none;
+  border: 1px solid darken($light-grey, 20%);
+  border-radius: 2.5px;
+  padding: 5px;
+  transition: border-color .3s ease-out;
+  font-family: $varela-round;
+}
+
+.search-box:focus {
+  border-color: $alert;
+  color: $alert;
+}
+
+input::-webkit-input-placeholder {
+  color: darken($light-grey, 20%);
+}

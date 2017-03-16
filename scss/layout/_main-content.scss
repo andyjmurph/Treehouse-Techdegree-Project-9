@@ -1,0 +1,23 @@
+.chart-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chart-area ul {
+  display: flex;
+  align-items: center;
+}
+
+.chart-area li {
+  margin-right: 1rem;
+  font-size: .8rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+canvas {
+  flex: 0 0 100%;
+}

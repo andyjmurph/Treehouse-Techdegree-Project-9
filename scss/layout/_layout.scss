@@ -1,28 +1,9 @@
-/* --- WRAPPER --- */
+/* --- CHART MENU --- */
 
 .wrapper {
-  width: 90%;
-  margin: 0 auto;
-
-  @media (min-width: 768px) {
-    width: 80%;
-  }
-
-}
-
-header .wrapper {
-  width: 100%;
-
-  @media (min-width: 768px) {
+  @include tablet {
     display: flex;
-    width: 80%;
-    align-items: center;
+    align-items: stretch;
+    width: 100%;
   }
-
-}
-
-.main-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }

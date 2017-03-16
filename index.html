@@ -14,42 +14,41 @@
   <!-- Start of header -->
 
   <header class="main-header">
-    <!-- Start wrapper -->
-    <div class="wrapper">
-      <a href="index.html" class="logo">
+    <div class="container">
+      <a href="" class="logo">
         <h1>YourApp&trade;</h1>
       </a>
-      <a class="nav-btn" href="#"></a>
-      <ul class="header-nav">
-        <li>
-          <a class="notification" href="#">
-            <img src="img/ico/icon-bell.svg" alt="Icon of a bell.">
-          </a>
+      <ul class="profile-info">
+        <li class="notification">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+          <g id="_x36__6_">
+          	<g>
+          		<path class="st0 bell" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+          			c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+          	</g>
+          </g>
+          </svg>
         </li>
         <li>
-          <a href="#">
-            <img class="user-img" src="img/profile-pic.jpg" alt="Picture of the logged in user.">
-          </a>
+          <img class="user-img" src="img/profile-pic.jpg" alt="Photo of the logged in user.">
         </li>
         <li>Andy Murphy</li>
       </ul>
+      <a href="#" class="btn-nav"></a>
     </div>
-    <!-- End wrapper -->
   </header>
 
   <!-- End of header -->
-  <!-- Start of nav -->
 
-  <nav class="main-nav">
-    <div class="wrapper">
-      <ul>
+  <!-- Start of container -->
+  <div class="wrapper">
+    <!-- Start of nav -->
+    <nav>
+      <ul class="main-nav">
         <li>
-          <a href="#">
+          <a href="#" class="tool" data-tip="Dashboard">
             <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <style type="text/css">
-            	.st0{fill:#FFFFFF;}
-            </style>
             <g id="_x31_0_20_">
             	<g>
             		<path class="st0" d="M25,18c1.7,0,3-1.3,3-3c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3C22,16.7,23.3,18,25,18z M24,14h2v2h-2V14z M25,26
@@ -65,12 +64,9 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="tool" data-tip="Members">
             <svg version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <style type="text/css">
-            	.st0{fill:#FFFFFF;}
-            </style>
             <g id="_x37__17_">
             	<g>
             		<path class="st0" d="M18,16.4c1.3-1.7,2-3.9,2-6.4c0-5.5-4-10-9-10C6,0,2,4.5,2,10c0,2.4,0.8,4.6,2,6.4c-2.3,0.8-4,3-4,5.6v4
@@ -86,11 +82,9 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="tool" data-tip="Visits">
             <svg version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <style type="text/css">
-            	.st0{fill:#FFFFFF;}
             </style>
             <g id="_x35__10_">
             	<g>
@@ -105,12 +99,9 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" class="tool" data-tip="Settings">
             <svg version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
-            <style type="text/css">
-            	.st0{fill:#FFFFFF;}
-            </style>
             <g id="_x32__16_">
             	<g>
             		<path class="st0" d="M26,24H14.9c-0.4-1.7-2-3-3.9-3c-1.9,0-3.4,1.3-3.9,3H6c-0.6,0-1,0.4-1,1c0,0.6,0.4,1,1,1h1.1
@@ -127,14 +118,46 @@
             </svg>
           </a>
         </li>
-
       </ul>
-    </div>
-  </nav>
+    </nav>
+    <!-- End of nav -->
+    <!-- Start of main content area -->
+    <main>
+      <div class="dashboard">
+        <h2>Dashboard</h2>
+        <form class="search-bar">
+          <input type="search" class="search-box" placeholder="search...">
+        </form>
+      <!-- End of main content area -->
+      <!-- Start of traffic chart area -->
+      </div>
+      <div class="container">
+        <p class="alert">You have a new notification.</p>
+      </div>
+      <div class="container chart-area">
+        <h3>Traffic</h3>
+        <ul>
+          <li>Daily</li>
+          <li class="active">Weekly</li>
+          <li>Monthly</li>
+          <li>Yearly</li>
+        </ul>
+        <canvas id="traffic-chart" height="150" width="400"></canvas>
+      </div>
+    </main>
+    <!-- End of traffic chart area -->
+
+    <!-- End of container -->
+  </div>
 
 
+  <!-- Start of JS links -->
 
   <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- End of JS links -->
+
 </body>
 </html>

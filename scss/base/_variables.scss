@@ -1,12 +1,13 @@
 
 /* --- DESCRIPTIVE COLOUR VARIABLES --- */
 
-$dark-grey: #262626;
+$dark-grey: dimgrey;
 $white: #fff;
 $grey-blue: #7E8AA2;
 $blue: #263248;
 $orange: #FF7B47;
 $green: #7ad38b;
+$light-grey: #fafafa;
 
 /* --- FUNCTIONAL COLOUR VARIABLES --- */
 
@@ -32,8 +33,12 @@ $link-hover: darken($orange, 20%);
 
 $alert: $green;
 
+//backgrounds
 
-/* --- FONTs --- */
+$bg-grey: $light-grey;
+
+
+/* --- FONTS --- */
 
 //STACKS
 
@@ -44,3 +49,12 @@ $varela-round: 'Varela Round', sans-serif;
 $text-lg: 2rem;
 $text-md: 1.5rem;
 $text-sml: 1rem;
+
+/* --- PADDING AND MARGIN --- */
+
+$p-10: 0.65rem;
+
+/* --- BREAKPOINTS --- */
+
+$brk-tablet: '(min-width: 768px)';
+$brk-desktop: '(min-width: 1024px)';
