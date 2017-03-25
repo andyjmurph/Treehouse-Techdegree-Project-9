@@ -224,7 +224,8 @@ main {
 // .search-box,
 input[type="search"],
 textarea,
-button {
+button,
+select {
   appearance: none;
   outline: none;
   border: 1px solid darken($light-grey, 20%);

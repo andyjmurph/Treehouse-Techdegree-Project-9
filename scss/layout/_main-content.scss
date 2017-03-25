@@ -131,7 +131,8 @@ canvas {
 
 #members,
 #activity,
-#message {
+#message,
+#settings {
   width: 100%;
   padding: 2.5%;
   border-right: 1px solid darken($light-grey, 20%);
@@ -206,7 +207,8 @@ canvas {
 }
 
 input,
-textarea {
+textarea,
+select {
   display: block;
 }
 
@@ -234,4 +236,21 @@ textarea {
 #message textarea {
   background: $light-grey;
   padding: $p-10;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: $p-10;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid darken($light-grey, 20%);
+  outline: 0;
+  background: $light-grey;
+}
+
+select:focus {
+  border-color: $alert;
 }

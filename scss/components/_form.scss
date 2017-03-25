@@ -1,1 +1,58 @@
+input[type="checkbox"].toggle-switch {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  background: $blue;
+  outline: 0;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+  position: relative;
+  margin-right: 30%;
+}
 
+input[type="checkbox"].toggle-switch:checked {
+  background: $alert;
+}
+
+input[type="checkbox"].toggle-switch::after {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background:$light-grey;
+  position: absolute;
+  transform: scale(0.8);
+  transition: all .2s ease-out;
+  right: 3.5rem;
+}
+
+input[type="checkbox"].toggle-switch:checked::after {
+  right: 0rem;
+  box-shadow: 0 0 -1px 2px rgba(0,0,0,0.1);
+}
+
+input[type="checkbox"].toggle-switch::before {
+  content: "OFF";
+  color: $light-grey;
+  font-size: 1rem;
+  position: absolute;
+  transition: all .2s ease-out;
+  transform: scale(.8);
+  left: 2.5rem;
+  top: .25rem;
+}
+
+input[type="checkbox"].toggle-switch:checked::before {
+  left: .5rem;
+  content: "ON";
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: $p-10 0;
+}
