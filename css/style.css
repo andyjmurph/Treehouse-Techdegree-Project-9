@@ -460,10 +460,24 @@ select {
   -moz-appearance: none;
   border: 1px solid #c7c7c7;
   outline: 0;
-  background: #fafafa; }
+  background: #fafafa;
+  margin-bottom: 35px; }
 
 select:focus {
-  border-color: #7ad38b; }
+  border-color: #7ad38b;
+  color: #7ad38b; }
+
+#settings button {
+  width: 45%;
+  color: #fff;
+  padding: 0.65rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #263248; }
+  #settings button:last-child {
+    background: #fafafa;
+    color: #263248;
+    margin-left: 5%; }
 
 /* --- IMPORTING BASE --- */
 /* --- ALL TYPE --- */

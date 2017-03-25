@@ -249,8 +249,27 @@ select {
   border: 1px solid darken($light-grey, 20%);
   outline: 0;
   background: $light-grey;
+  margin-bottom: 35px;
 }
 
 select:focus {
   border-color: $alert;
+  color: $alert;
+}
+
+#settings button {
+  width: 45%;
+  color: $white;
+  padding: $p-10;
+  border-radius: 4px;
+  cursor: pointer;
+  background: $blue;
+
+
+  &:last-child {
+    background: $light-grey;
+    color: $blue;
+    margin-left: 5%;
+  }
+
 }
