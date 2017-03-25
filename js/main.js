@@ -4,10 +4,14 @@ $profile = $(".profile-info");
 $traffic = $("#traffic-chart");
 $dailyTraffic = $("#daily-traffic-chart");
 $mobile = $("#mobile-chart");
-
+let today = new Date();
+const dd = today.getDate();
+const mm = today.getMonth()+1;
+const yyyy = today.getFullYear();
+let activities = ["commented on Your App's SEO tips", "Liked Facebook's changes for 2016", "Commented on Facebook's changes for 2016", "posted Your App's SEO tips"];
+today = dd+'/'+mm+'/'+yyyy;
 
 //Show/hide responsive navigation on mobile devices.
-
 $navBtn.on("click", function() {
   if ($profile.hasClass("open")) {
     $profile.slideUp();
@@ -126,4 +130,38 @@ $mobileChart = new Chart ($mobile, {
       },
       segmentShowStroke: false
     }
+})
+
+// Generate random user for new-members
+
+$.ajax({
+  url: 'https://randomuser.me/api?results=4',
+  dataType: 'json',
+  success: function(data) {
+    $.each(data.results, function(index, user){
+      // Create the list item
+      let userImg = user.picture.thumbnail;
+      let userName = user.name.first + " " + user.name.last;
+      let userEmail = user.email;
+      let newUser = "<li>" + "<img src=\"" + userImg + "\" alt=\"Photograph of the user\">" + "<div  class=\"user-info\">" + "<p>" + userName + "</p>" + "<a href=\"" + userEmail + "\">" + userEmail + "</a>" + "</div>" + "<p>" + today + "</p>" + "</li>";
+      $(".new-members").append(newUser);
+      console.log(newUser);
+    });
+  }
+});
+
+
+$.ajax({
+  url: "https://randomuser.me/api?results=4",
+  dataType: "json",
+  success: function(data) {
+    $.each(data.results, function(index, user) {
+      let userImg = user.picture.thumbnail;
+      let userName = user.name.first + " " + user.name.last;
+      let hours = Math.floor(Math.random() * 4) + 1;
+      let activityString = userName + " " + activities[index];
+      let memberActivity = "<li>" + "<img src=\"" + userImg + "\" alt=\"Photograph of the user\">" + "<div class=\"activity-details\">" + "<p>" + activityString + "</p>" + "<p class=\"time\">" + hours + " hours ago" + "</p>" + "</div>" + "</ul>";
+      $(".member-activity").append(memberActivity);
+    })
+  }
 })

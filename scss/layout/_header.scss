@@ -221,7 +221,10 @@ main {
   }
 }
 
-.search-box {
+// .search-box,
+input[type="search"],
+textarea,
+button {
   appearance: none;
   outline: none;
   border: 1px solid darken($light-grey, 20%);
@@ -231,11 +234,14 @@ main {
   font-family: $varela-round;
 }
 
-.search-box:focus {
+input[type="search"]:focus,
+textarea:focus {
   border-color: $alert;
   color: $alert;
 }
 
-input::-webkit-input-placeholder {
-  color: darken($light-grey, 20%);
+#message input,
+#message textarea {
+  width: 100%;
+  margin: $p-10 0;
 }
