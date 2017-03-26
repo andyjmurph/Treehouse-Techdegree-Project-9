@@ -10,6 +10,20 @@ const mm = today.getMonth()+1;
 const yyyy = today.getFullYear();
 let activities = ["commented on Your App's SEO tips", "Liked Facebook's changes for 2016", "Commented on Facebook's changes for 2016", "posted Your App's SEO tips"];
 today = dd+'/'+mm+'/'+yyyy;
+const container = $(".container");
+
+//hide the alert notification
+$(".alert").hide();
+
+//Show the alert notification
+$(document).ready( function() {
+  $(".alert").delay(600).show("fast");
+})
+
+//hide the alert notification on clicking close button
+$(".alert img").click( function () {
+  $(".alert").hide("fast");
+})
 
 //Show/hide responsive navigation on mobile devices.
 $navBtn.on("click", function() {
@@ -145,7 +159,6 @@ $.ajax({
       let userEmail = user.email;
       let newUser = "<li>" + "<img src=\"" + userImg + "\" alt=\"Photograph of the user\">" + "<div  class=\"user-info\">" + "<p>" + userName + "</p>" + "<a href=\"" + userEmail + "\">" + userEmail + "</a>" + "</div>" + "<p>" + today + "</p>" + "</li>";
       $(".new-members").append(newUser);
-      console.log(newUser);
     });
   }
 });
@@ -165,3 +178,22 @@ $.ajax({
     })
   }
 })
+
+//show the message sent notification if any message field is blank
+$("button[name='send']").click( function() {
+  event.preventDefault();
+  let message = "<div class='message-notification'><p></p></div>";
+  let messageText = "";
+  let color = "";
+  if ( $("input[name='usersearch']").val() == "" || $("textarea").val() == "" ) {
+    messageText = "Your message was not sent.  Please complete all fields before clicking send.";
+    color = "tomato";
+  } else {
+    messageText = "Your message was sent successfully.";
+    color = "#7ad38b";
+  }
+  $("#message h3").append(message);
+  $(".message-notification p").text(messageText);
+  $(".message-notification").css("background", color);
+  $(".message-notification").delay(3000).fadeOut(400);
+});

@@ -306,6 +306,7 @@ canvas {
   @media (min-width: 768px) {
     .social {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #c7c7c7; } }
@@ -491,19 +492,35 @@ select:focus {
   color: #fff;
   font-size: 1.5rem; }
 
+.social h2 {
+  flex: 0 0 100%; }
+
 .active {
   background: #7ad38b;
   border-radius: 25px;
   padding: 5px 10px;
   color: #fff; }
 
-.alert {
+.alert,
+.message-notification {
   background: #7ad38b;
   border-radius: 2.5px;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  align-items: center; }
+
+.alert p,
+.message-notification p {
   color: #fff;
-  text-align: left;
-  box-shadow: 0 2px 0 #39ae50; }
+  margin: 0;
+  font-size: .8rem; }
+
+.alert img,
+.message-notification img {
+  width: 1.5625rem;
+  cursor: pointer; }
 
 input[type="checkbox"].toggle-switch {
   appearance: none;
